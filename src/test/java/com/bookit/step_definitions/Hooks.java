@@ -18,7 +18,7 @@ public class Hooks {
 		System.out.println("creating database connection");
 		DB_Util.createConnection();
 	}
-	
+
 	@After("@db")
 	public void afterDbHook() {
 		System.out.println("closing database connection");

@@ -1,7 +1,7 @@
 
 Feature: User Verification
 
-
+  @wip @db
   Scenario: verify information about logged user
     Given I logged Bookit api using "lfinnisz@yolasite.com" and "lissiefinnis"
     When I get the current user information from api

@@ -27,7 +27,7 @@ public class BookitUtils {
 
     public static String generateTokenByRole(String role) {
 
-        returnCredentials(role);
+        //returnCredentials(role);
 
 
         String token = given()
