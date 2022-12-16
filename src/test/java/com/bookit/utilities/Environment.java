@@ -21,7 +21,8 @@ public class Environment {
 
     static{
         Properties properties = null;
-        String environment = System.getProperty("environment") != null ? environment = System.getProperty("environment") : ConfigurationReader.getProperty("environment");
+        String environment = System.getProperty("environment") != null ?
+                environment = System.getProperty("environment") : ConfigurationReader.getProperty("environment");
 
 
 
@@ -48,10 +49,6 @@ public class Environment {
         MEMBER_PASSWORD = properties.getProperty("team_member_password");
         LEADER_EMAIL = properties.getProperty("team_leader_email");
         LEADER_PASSWORD = properties.getProperty("team_leader_password");
-
-
-
-
 
     }
 
