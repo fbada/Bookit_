@@ -1,139 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-<A_:project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xmlns:A_="http://maven.apache.org/POM/4.0.0"
-            xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <groupId>org.cydeo</groupId>
+    <artifactId>Bookit</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-    <A_:modelVersion>4.0.0</A_:modelVersion>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-    <A_:groupId>org.cydeo</A_:groupId>
-    <A_:artifactId>Bookit</A_:artifactId>
-    <A_:version>1.0-SNAPSHOT</A_:version>
+    <dependencies>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.5.1</version>
+        </dependency>
 
-    <A_:properties>
-        <A_:maven.compiler.source>11</A_:maven.compiler.source>
-        <A_:maven.compiler.target>11</A_:maven.compiler.target>
-        <A_:project.build.sourceEncoding>UTF-8</A_:project.build.sourceEncoding>
-    </A_:properties>
-
-    <A_:dependencies>
-        <A_:dependency>
-            <A_:groupId>io.rest-assured</A_:groupId>
-            <A_:artifactId>rest-assured</A_:artifactId>
-            <A_:version>4.5.1</A_:version>
-        </A_:dependency>
-
-        <A_:dependency>
-            <A_:groupId>org.seleniumhq.selenium</A_:groupId>
-            <A_:artifactId>selenium-java</A_:artifactId>
-            <A_:version>3.141.59</A_:version>
-        </A_:dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-        <A_:dependency>
-            <A_:groupId>io.github.bonigarcia</A_:groupId>
-            <A_:artifactId>webdrivermanager</A_:artifactId>
-            <A_:version>5.1.0</A_:version>
-        </A_:dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.1.0</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
-        <A_:dependency>
-            <A_:groupId>com.github.javafaker</A_:groupId>
-            <A_:artifactId>javafaker</A_:artifactId>
-            <A_:version>1.0.2</A_:version>
-        </A_:dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-        <A_:dependency>
-            <A_:groupId>io.cucumber</A_:groupId>
-            <A_:artifactId>cucumber-java</A_:artifactId>
-            <A_:version>7.2.3</A_:version>
-        </A_:dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.2.3</version>
+        </dependency>
 
 
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-        <A_:dependency>
-            <A_:groupId>io.cucumber</A_:groupId>
-            <A_:artifactId>cucumber-junit</A_:artifactId>
-            <A_:version>7.2.3</A_:version>
-            <A_:scope>test</A_:scope>
-        </A_:dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.2.3</version>
+            <scope>test</scope>
+        </dependency>
 
 
-        <A_:dependency>
-            <A_:groupId>com.fasterxml.jackson.core</A_:groupId>
-            <A_:artifactId>jackson-databind</A_:artifactId>
-            <A_:version>2.13.0</A_:version>
-        </A_:dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.0</version>
+        </dependency>
 
-        <A_:dependency>
-            <A_:groupId>org.projectlombok</A_:groupId>
-            <A_:artifactId>lombok</A_:artifactId>
-            <A_:version>1.18.20</A_:version>
-        </A_:dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+        </dependency>
 
-        <A_:dependency>
-            <A_:groupId>org.postgresql</A_:groupId>
-            <A_:artifactId>postgresql</A_:artifactId>
-            <A_:version>42.2.10</A_:version>
-        </A_:dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.10</version>
+        </dependency>
 
-        <A_:dependency>
-            <A_:groupId>me.jvt.cucumber</A_:groupId>
-            <A_:artifactId>reporting-plugin</A_:artifactId>
-            <A_:version>7.2.0</A_:version>
-        </A_:dependency>
-    </A_:dependencies>
-
-
-    <A_:build>
-        <A_:plugins>
-            <A_:plugin>
-                <A_:groupId>org.apache.maven.plugins</A_:groupId>
-                <A_:artifactId>maven-surefire-plugin</A_:artifactId>
-                <A_:version>3.0.0-M3</A_:version>
-                <A_:configuration>
-                    <A_:parallel>methods</A_:parallel>
-                    <A_:threadCount>2</A_:threadCount>
-                    <A_:testFailureIgnore>true</A_:testFailureIgnore>
-                    <A_:runOrder>Alphabetical</A_:runOrder>
-                    <A_:includes>
-                        <A_:include>**/*CukesRunner.java</A_:include>
-                    </A_:includes>
-                </A_:configuration>
-            </A_:plugin>
+        <dependency>
+            <groupId>me.jvt.cucumber</groupId>
+            <artifactId>reporting-plugin</artifactId>
+            <version>7.2.0</version>
+        </dependency>
+    </dependencies>
 
 
-            <A_:plugin>
-                <A_:groupId>net.masterthought</A_:groupId>
-                <A_:artifactId>maven-cucumber-reporting</A_:artifactId>
-                <A_:version>3.15.0</A_:version>
-                <A_:executions>
-                    <A_:execution>
-                        <A_:id>execution</A_:id>
-                        <A_:phase>verify</A_:phase>
-                        <A_:goals>
-                            <A_:goal>generate</A_:goal>
-                        </A_:goals>
-                        <A_:configuration>
-                            <A_:projectName>Bookit</A_:projectName>
-                            <A_:outputDirectory>${project.build.directory}/cucumber-reports</A_:outputDirectory>
-                            <A_:cucumberOutput>target/json-report.json</A_:cucumberOutput>
-                            <A_:jsonFiles>
-                                <A_:param>${project.build.directory}/cucumber-reports/cucumber.json</A_:param>
-                            </A_:jsonFiles>
-                        </A_:configuration>
-                        <A_:goals>
-                            <A_:goal>generate</A_:goal>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <configuration>
+                    <parallel>methods</parallel>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <runOrder>Alphabetical</runOrder>
+                    <includes>
+                        <include>**/*CukesRunner.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-                        </A_:goals>
-                    </A_:execution>
-                </A_:executions>
-            </A_:plugin>
-
-
-        </A_:plugins>
-    </A_:build>
-
-
-</A_:project>
+</project>
