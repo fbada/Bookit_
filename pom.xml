@@ -92,7 +92,8 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <parallel>methods</parallel>
-                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                    <threadCount>2</threadCount>
+                    <perCoreThreadCount>true</perCoreThreadCount>
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>Alphabetical</runOrder>
                     <includes>
