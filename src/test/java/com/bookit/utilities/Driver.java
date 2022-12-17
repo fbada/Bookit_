@@ -15,6 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.URL;
+import java.util.Arrays;
 
 
 public class Driver {
@@ -51,7 +52,22 @@ public class Driver {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
+
+                case "remote-chrome-headless":
+                    try {
+                        // assign your grid server address
+                        String gridAddress = "localhost";
+                        URL url = new URL("http://"+ gridAddress + ":4444/wd/hub");
+                        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+                        desiredCapabilities.setBrowserName("chrome");
+                        desiredCapabilities.setCapability("chrome.switches", Arrays.asList("--headless"));
+                        driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     break;
+
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
